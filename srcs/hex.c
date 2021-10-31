@@ -6,7 +6,7 @@
 /*   By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 07:36:35 by kamin             #+#    #+#             */
-/*   Updated: 2021/10/30 08:16:05 by kamin            ###   ########.fr       */
+/*   Updated: 2021/10/31 22:08:20 by kamin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ void	ft_hex_dec_upper(int nbr, int *printed)
 
 void	ft_print_pointer(int nbr, int *printed)
 {
-	//ft_putstr("")
+	ft_putstr("0x", printed);
 	ft_hex_dec(nbr, printed);
-
 }

@@ -6,7 +6,7 @@
 /*   By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 11:59:18 by kamin             #+#    #+#             */
-/*   Updated: 2021/10/30 07:53:38 by kamin            ###   ########.fr       */
+/*   Updated: 2021/10/31 23:31:58 by kamin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_check_flags(const char *flags, va_list params, int *printed)
 	else if (*flag == 's')
 		ft_putstr(va_arg(params, char *), printed);
 	else if (*flag == 'p')
-		ft_print_pointer(va_arg(params, void *), printed);
+		ft_print_pointer(ft_atoi(va_arg(params, char *)), printed);
 	else if (*flag == 'd')
 		ft_putnbr(va_arg(params, int), printed);
 	else if (*flag == 'i')
@@ -28,9 +28,9 @@ void	ft_check_flags(const char *flags, va_list params, int *printed)
 	else if (*flag == 'u')
 		ft_putnbr_u(va_arg(params, unsigned int), printed);
 	else if (*flag == 'x')
-		ft_hex_dec(va_arg(params, char *), printed);
+		ft_hex_dec(va_arg(params, int), printed);
 	else if (*flag == 'X')
-		ft_hex_dec_upper(va_arg(params, char *), printed);
+		ft_hex_dec_upper(va_arg(params, int), printed);
 	else if (*flag == '%')
 		ft_putchar('%', printed);
 }
@@ -47,7 +47,7 @@ int	ft_printf(const char *flags, ...)
 		if (*flags != '%')
 		{
 			write(1, flags, 1);
-			printed++;
+			printed += 1;
 		}
 		else
 		{
@@ -60,8 +60,10 @@ int	ft_printf(const char *flags, ...)
 	return (printed);
 }
 
-int main()
-{
-	ft_printf("karim %d", "amin");
-	return (0);
-}
+// int main()
+// {
+// 	//printf("%d\n", ft_printf("a%%a\n"));
+// 	printf("%d\n", ft_printf(" %u ", -1));
+// 	printf("%d\n", printf(" %u ", -1));
+// 	return (0);
+// }

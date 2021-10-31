@@ -6,7 +6,7 @@
 /*   By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 12:02:11 by kamin             #+#    #+#             */
-/*   Updated: 2021/10/30 06:16:57 by kamin            ###   ########.fr       */
+/*   Updated: 2021/10/31 22:10:39 by kamin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,9 @@ void	ft_putnbr(int n, int *printed);
 void	ft_putnbr_u(unsigned int n, int *printed);
 void	ft_putchar(char c, int *printed);
 void	ft_putstr(char * str, int *printed);
+int		ft_atoi(const char *str);
+void	ft_print_pointer(int nbr, int *printed);
+void	ft_hex_dec_upper(int nbr, int *printed);
+void	ft_hex_dec(int nbr, int *printed);
+int		ft_isdigit(int c);
 #endif
