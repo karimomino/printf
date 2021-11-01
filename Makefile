@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+         #
+#    By: kamin <kamin@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/31 20:57:54 by kamin             #+#    #+#              #
-#    Updated: 2021/10/31 22:12:46 by kamin            ###   ########.fr        #
+#    Updated: 2021/11/01 00:15:14 by kamin            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ C = clang
 
 NAME = libftprintf.a
 
-FLAGS = -Wall -Wextra -Werror -O2
+FLAGS = -Wall -Wextra -Werror -O2 -g
 
 LIBFT = libft
 

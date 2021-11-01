@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+        */
+/*   By: kamin <kamin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 11:59:18 by kamin             #+#    #+#             */
-/*   Updated: 2021/10/31 23:31:58 by kamin            ###   ########.fr       */
+/*   Updated: 2021/11/01 00:59:40 by kamin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_check_flags(const char *flags, va_list params, int *printed)
 	else if (*flag == 's')
 		ft_putstr(va_arg(params, char *), printed);
 	else if (*flag == 'p')
-		ft_print_pointer(ft_atoi(va_arg(params, char *)), printed);
+		ft_print_pointer(va_arg(params, int), printed);
 	else if (*flag == 'd')
 		ft_putnbr(va_arg(params, int), printed);
 	else if (*flag == 'i')
@@ -60,10 +60,10 @@ int	ft_printf(const char *flags, ...)
 	return (printed);
 }
 
-// int main()
-// {
-// 	//printf("%d\n", ft_printf("a%%a\n"));
-// 	printf("%d\n", ft_printf(" %u ", -1));
-// 	printf("%d\n", printf(" %u ", -1));
-// 	return (0);
-// }
+int main()
+{
+	//printf("%d\n", ft_printf("a%%a\n"));
+	printf("%d\n", ft_printf(" %p %p ", 0, 0));
+	printf("%d\n", printf(" %p %p ", 0, 0));
+	return (0);
+}

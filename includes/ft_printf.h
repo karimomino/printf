@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+        */
+/*   By: kamin <kamin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/28 12:02:11 by kamin             #+#    #+#             */
-/*   Updated: 2021/10/31 22:10:39 by kamin            ###   ########.fr       */
+/*   Updated: 2021/11/01 00:55:39 by kamin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_putchar(char c, int *printed);
 void	ft_putstr(char * str, int *printed);
 int		ft_atoi(const char *str);
 void	ft_print_pointer(int nbr, int *printed);
-void	ft_hex_dec_upper(int nbr, int *printed);
-void	ft_hex_dec(int nbr, int *printed);
+void	ft_hex_dec_upper(unsigned int nbr, int *printed);
+void	ft_hex_dec(unsigned int nbr, int *printed);
 int		ft_isdigit(int c);
 #endif

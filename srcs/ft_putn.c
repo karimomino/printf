@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putn.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kamin <kamin@42abudhabi.ae>                +#+  +:+       +#+        */
+/*   By: kamin <kamin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 03:45:58 by kamin             #+#    #+#             */
-/*   Updated: 2021/10/31 23:31:40 by kamin            ###   ########.fr       */
+/*   Updated: 2021/10/31 22:51:34 by kamin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,6 @@ static int	ft_intlen_u(unsigned long num)
 	{
 		numlen = 1;
 	}
-	if (num < 0)
-	{
-		numlen++;
-		num = -1 * num;
-		minus = 1;
-	}
 	while (num != 0)
 	{
 		num = num / 10;
@@ -118,7 +112,7 @@ void	ft_putnbr_u(unsigned int n, int *printed)
 		ft_putchar('0', printed);
 	else
 	{
-		num = check_minus((long)n, printed);
+		//num = check_minus((long)n, printed);
 		while (--nlen > 0)
 			delim = delim * 10;
 		while (nlencpy-- > 0)
